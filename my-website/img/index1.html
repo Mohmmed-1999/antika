@@ -1955,7 +1955,7 @@
 
 
         function loadAllAntiques(){
-            fetch('http://localhost:3000/api/antiques')
+            fetch('./imge/antiques.json')
             .then(response => response.json())
             .then(antiques => {
                 const topContainer = document.getElementById('antiques-container-top');
@@ -2036,7 +2036,7 @@
 
 
         function loadBentoArchitectureGallery(){
-            fetch('http://localhost:3000/api/bento-architecture?v=' + new Date().getTime())
+            fetch('./bento-data-json')
             .then(response => response.json())
             .then(bentoData => {
            
@@ -2103,7 +2103,7 @@
             loadBentoArchitectureGallery();
         })
         function loadDynamicTabsGallery(){
-            fetch('http://localhost:3000/api/antique-tabs')
+            fetch('./antique-tabs-json')
             .then(response => response.json())
             .then(bentoData => {
                 const buttonsContainer = document.getElementById('tabs-buttons-container');
@@ -2140,7 +2140,7 @@
 
 
         function initMegaShowcaseSection(){
-            fetch('http://localhost:3000/api/feature-slider')
+            fetch ('./feature-slider.json')
             .then(response => {
                 if (!response.ok) throw new Error('فشل جلب البيانات السلايدر');
                 return response.json();
@@ -2387,7 +2387,7 @@
 
            let allAntiques = [];
            
-            fetch('http://localhost:3000/api/antiques')
+            fetch('./antiques.json')
             .then(response => response.json())
             .then(data => {
                 allAntiques = data;
